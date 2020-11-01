@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no" />
+    <title>Handbags</title>
+    <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .container {
+            position: relative
+        }
+
+        .addToCartDropDown {
+            border: 2px solid red;
+            position: absolute;
+            top: -100px;
+            right: 0;
+            z-index: 10;
+            background: #fff;
+            padding: 12px;
+        }
+        #cart_data{
+            display:none;
+        }
+        .addToCartDropDown:hover #cart_data{
+            display:block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="addToCartDropDown">
+            Cart
+            <div id="cart_data"></div>
+        </div>
+
+
+
+        <h2 id="category_name"></h2>
+        <div class="row" id="products">
+
+        </div>
+        <!--End Row-->
+
+    </div>
+    <!--End Container-->
+</body>
+<script>
+    /*Getting JSON File name from URL*/
+    var params = new URLSearchParams(window.location.search)
+    var jsonFileName = params.get('e');
+    //Getting Product from JSON (fetch is JS default API)
+    fetch(`./js/JSON/${jsonFileName}.json`).then((res) => { return res.json(); }).then((obj) => {
+        //console.log(obj.products);
+        /*Get Category Name by function*/
+        getCategoryName(obj.categories_ref_id);
+        var catBoxHTML = '';
+        for (var i = 0; i < obj.products.length; i++) {
+            //console.log(obj.products[i]);
+            catBoxHTML += `
+            <div class="col-md-3">
+                <div class="product-top">
+                    <img src="./images/${obj.imageFolder}/${obj.products[i].image}" width="100%" height="200">
+                    <div class="overlay">
+                        <button type="button" class="btn btn-secondary" title="Quick shop"><i class="fa fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary" title="Add to WhishList"><i
+                                class="fa fa-heart-o"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-bottom text-center">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <h3>${obj.products[i].name}</h3>
+                    <h5>${obj.products[i].price}</h5>`;
+            catBoxHTML += "<button type='button' onClick='addToCart(" + JSON.stringify(obj.products[i]) + ',' + '"' + obj.imageFolder + '"' + ")' class='btn btn-primary' title='Add to Cart'>Add to Cart</button>";
+            catBoxHTML += ` </div>
+            <br/><br/></div>
+            `;
+        }
+        document.getElementById('products').innerHTML = catBoxHTML;
+        //console.log(catBoxHTML);
+    }).catch((error) => { alert(error); })
+
+
+    /*Getting Category Name by ID*/
+    getCategoryName = (catId) => {
+        fetch(`./js/JSON/categories.json`).then((res) => { return res.json(); }).then((obj) => {
+            //console.log(obj);
+            /*Find specific object from JSON by given ID*/
+            var specificObj = obj.categories.find((e) => e.id === parseInt(catId));
+            /*Get and assign Category Name with innerHTML*/
+            document.getElementById('category_name').innerText = specificObj.name;
+        }).catch((error) => { alert(error); })
+    }
+
+
+    addToCart = (product, imageFolderName) => {
+        var items = localStorage.getItem("atc");
+        items = !items ? [] : JSON.parse(items);
+        product.imgFolderName = imageFolderName;
+        items.push(product);
+        items = JSON.stringify(items);
+        localStorage.setItem("atc", items);
+        console.log(items);
+        showCartDetails();
+    }
+
+    showCartDetails = () => {
+        var items = JSON.parse(localStorage.getItem("atc"));
+        var cartDetails = '';
+        for (var i = 0; i < items.length; i++) {
+            cartDetails += `
+                <div>
+                    <img src="./images/${items[i].imgFolderName}/${items[i].image}" width="100" height="100">
+                    <b>Name</b>: ${items[i].name} - <b>Price</b>: ${items[i].price}
+                    <button type="button" onClick="removeFromCart(${i})" class="btn btn-danger">x</button>
+                </div>
+            `;
+        }
+        document.getElementById('cart_data').innerHTML = cartDetails;
+    }//End function
+    /*Call on load to show add to cart products*/
+    showCartDetails();
+
+    removeFromCart = (index) => {
+        var items = JSON.parse(localStorage.getItem("atc"));
+        items.splice(index, 1);
+        items = JSON.stringify(items);
+        localStorage.setItem("atc", items);
+        showCartDetails();
+    }//End funciton
+
+
+</script>
+
+</html>
