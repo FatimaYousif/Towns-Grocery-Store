@@ -1,0 +1,7 @@
+.card{
+  box-shadow: 0 5px 10px 4px rgba(146, 139, 139, 0.7);
+  position: relative;
+}
+.card:hover .card a img{
+  transform: ;
+}
