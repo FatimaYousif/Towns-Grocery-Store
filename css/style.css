@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,100;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* body{
+    overflow-x: hidden;
+} */
+/* ---------------------Variables for color palete---------------------- */
+:root{
+    --primary: #024150;
+    --secondary: #0DB39E;
+    /* --secondary: #3eb9a9; */
+    --aqua: #16DB93;
+    --darkblue:#54478C;
+    --saphireblue:#2C699A;
+    --lightgreen:#83E377;
+    --inchworm:#B9E769;
+    --corn:#EFEA5A;
+    --maize:#F1C453;
+    --sandybrown:#F29E4C;
+}
+
+/* -----------------Utility Styles--------------------------------------- */
+button, input{
+    outline: none;
+    border: none;
+}
+i{
+    cursor: pointer;
+}
+li{
+list-style-type:none;
+}
+section{
+    margin: 2rem 0;
+}
+.product-heading{
+    display: inline;
+    /* background: yellow; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    margin: 2rem 0;
+
+}
+.product-heading::before{
+    /* margin: .4rem 0; */
+    content: "\f005";
+    position: absolute;
+    /* width: 40px;
+    height: 34px; */
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    border-radius: 50%;
+    background: var(--sandybrown);
+    font-size: 1rem;
+    padding: .2rem;
+    font-family: 'Font Awesome 5 Free';
+    z-index: 2;
+    color: white;
+}
+.product-heading::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--sandybrown);
+    margin: -.8rem 0;
+}
+.index-caption{
+    margin: 2rem 0;
+}
+/* -----------------------------Header Starts---------------------------- */
+header{
+    /* background: var(--sandybrown); */
+    /* background: var(--secondary); */
+    /* height: 13vh; */
+    position: relative;
+    /* background: var(--sandybrown); */
+    /* background: var(--saphireblue); */
+    /* color: white; */
+    /* overflow-x: hidden; */
+}
+
+.top-bar{
+    /* background: salmon; */
+    display: flex;
+    /* justify-content: space-around;
+    align-items: center; */
+}
+.top-bar form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 0.7rem;
+}
+
+.top-bar .fa-bars{
+    /* color: ; */
+    background:none;
+    font-size: 1.5rem;
+}
+  
+.top-bar form input{
+    /* position: relative; */
+    width: 20rem;
+    border: 1px solid #dddddd;
+    outline: none !important;
+}
+.top-bar form .fa-search{
+    position: absolute;
+    right:.9rem;
+    top: 1.3rem;
+    transform: translateY(-50%);
+    color: var(--secondary);
+    background:white;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 80% !important;
+}
+.logo.hide{
+    display: none;
+}
+.logo .tagline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: yellow; */
+    height: 100%;
+    width: 100%;
+    /* position: relative; */
+}
+.logo .tagline p{
+    /* background: chocolate; */
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin: .1rem 0 0 0 ;
+    font-size: 1.7rem;    
+    color: var(--secondary);
+    text-shadow: 2px 0px 5px rgba(241, 238, 238, 0.5);
+}
+.logo img{
+    width: 4rem;
+    /* width: 150px; */
+    border-radius: 50%;
+}
+.cart{
+    display: flex;
+    /* background: mediumaquamarine; */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.container-fluid{
+    /* margin: 0 !important;
+    width: 100vw !important; */
+}
+.cart i{
+    margin-right:1rem ;
+    padding: 6px;
+    border-radius: 20%;
+    background: var(--secondary);
+    color: #f1f1f1;
+    font-size: 1rem;
+}
+.cart span{
+    font-weight: 300 !important;
+  
+}
+
+header .navbar ul li{
+    font-weight: 400;
+    margin: .1rem 1.2rem;
+    letter-spacing: 1px;
+}
+ header .navbar,
+ .navbar .dropdown-menu{
+        background: var(--secondary) !important;
+    }
+nav li:hover,
+nav .dropdown-menu a:hover {
+
+}
+.navbar .fa-chevron-right{
+    color: var(--secondary);
+    font-size: 2rem;
+    margin-left: 18rem !important;
+}
+.navbar ul li a,
+nav .dropdown-menu a{
+    color:white !important;
+    font-weight: 300;
+}
+
+.navbar .dropdown-menu a:hover {
+    background: teal;
+
+}
+.navbar.sticky{
+    position: fixed;
+     top: 0;
+    z-index: 99;
+    width: 100%;
+    transition: .3s linear;
+    background: var(--sandybrown);
+    padding: .8rem 0;
+    font-size: .9rem;
+    font-weight: bold;
+}
+.navbar form input{
+    width: 28rem !important;
+    /* padding: 1.4rem 0; */
+    border-radius: none !important;
+    position: relative;
+}
+.navbar form i{
+    position: absolute;
+    right: 2rem;
+    color: var(--secondary);
+    padding: .4rem;
+    border-radius: 30%;
+}
+
+/* ------Navbar ENDS---------- */
+
+
+/* -----------------------------------------FORM STARTS----------------------=-------------- */
+.form-background{
+    /* position: relative; */
+}
+button, input{
+    outline: none !important; 
+}
+.form-bg{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)) ;
+    display: none;
+}
+.form-box{
+    margin: auto;
+    width: 30rem;
+    height: 33rem;
+    background: var(--maize);
+    position: relative;
+    padding: .3rem;
+    box-shadow: 0 0 10px 0px rgba(45, 45, 46, .5);
+    color: white;
+}
+.fa-window-close{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    color: var(--darkblue);
+    font-size: 1.4rem;
+}
+.button-box{
+    width: 240px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 10px 0px rgba(45, 45, 46, .5);
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    font-size: 1rem;
+    color: white;
+}
+#btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 100%;
+    background:  var(--darkblue);
+    border-radius: 2rem;
+    transition: linear .3s;
+}
+.social-icons{
+    margin: 2rem auto;
+    text-align: center;
+}
+.social-icons i {
+    font-size: 2.2rem;
+    margin: 0 .8rem;
+    box-shadow: 0 0 20px rgba(247, 137, 97,.5);
+    color: var(--primary);
+    cursor: pointer;
+}
+.input-group{
+    position: absolute;
+    top: 11.5rem;
+    width: 17.6rem;
+}
+.input-field{
+    width: 100%;
+    padding: .8rem 0;
+    margin: .4rem 0;
+    border: none;
+    border-bottom: 1px solid #7c7c7c;
+    background: transparent;
+    color: rgb(45, 45, 46);
+}
+#submit-btn{
+    width: 84%;
+    display: block;
+    padding: .3rem 2rem;
+    background: var(--primary);
+    border-radius: .6rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+#login{
+    left: 120px;
+}
+#sign-up{
+    left: 500px;
+
+}
+.form-box{
+    transition: linear .3s;
+    overflow: hidden;
+}
+.check-box{
+    margin-top: 1rem;
+}
+
+/* -----------------------------------------FORM ENDS----------------------=-------------- */
+
+
+/* -----------------------------------------CAROUSEL STARTS----------------------=-------------- */
+
+.carousel-item img{
+    width: 100%;
+    height: 90vh;
+    /* filter: grayscale(.3); */
+}
+.shortcuts{
+    overflow-x: hidden;
+}
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.carousel-caption{
+    padding: 2rem ;
+}
+.carousel-caption h2 {
+    text-transform: uppercase;
+    text-shadow: 2px 3px 4px rgba(0,0,0,0.3);
+}
+.shortcuts .boxes{
+    display: flex;
+    align-items: center;
+    background: rgb(11, 168, 168);
+    /* width: 290px;
+    height: 100px; */
+    /* margin: 2rem; */
+    box-shadow: 2px 5px 5px rgba(117, 117, 117, 0.6);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 1px 6px rgb(44, 43, 43);
+    /* overflow-x: hidden; */
+}
+.boxes i{
+    padding: 1rem;
+}
+.boxes p{
+    border-left: 1px solid #fff;
+    margin: 1rem;
+    padding-left: 1rem;
+    font-size: 1.rem;
+}
+.shortcuts .box1{
+    background: var(--maize);
+}
+.shortcuts .box2{
+    background: var(--primary);
+}
+.shortcuts .box3{
+    background: var(--darkblue);
+}
+.shortcuts .box4{
+    background: var(--inchworm);
+}
+.grocery{
+    box-shadow: 2px 5px 5px rgba(167, 162, 162, 0.6);
+    margin: 6rem 0;
+    background: var(--maize);
+    /* color: white; */
+}
+.grocery-heading{
+    /* border-bottom: 1px solid #dddddd; */
+}
+
+
+
+.grocery-heading h2{
+    display: inline;
+    background: var(--primary);
+    padding: 3px 5px;
+    margin: 7rem 0;
+    /* box-shadow: 2px 5px 5px rgba(167, 162, 162, 0.6); */
+    /* border-radius: 4px; */
+    color: white;
+    cursor: pointer;
+    /* text-shadow: 0 1px 10px rgb(175, 173, 173); */
+    text-transform: uppercase;
+}
+.grocery .card{
+    background: none;
+}
+.grocery .card-title{
+    border: none;
+}
+.grocery .card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid rgba(173, 172, 172, 0.8);
+    box-shadow: 2px 3px 5px rgba(66, 66, 66, 0.6);
+    transition: .2s linear;
+}
+.grocery .card img:hover {
+    transform: scale(.99);
+    border: 6px solid rgb(211, 123, 61);
+    box-shadow: none;
+
+}
+.grocery .card:hover{
+    color: saddlebrown;
+}
+.grocery .card{
+    border: none;
+    box-shadow: none;
+    transition: .2s ;
+}
+/* ---------------------------------FOOTER STARTS---------------------------------------- */
+footer{
+    background: var(--secondary);
+    color: rgb(248, 236, 236);
+    padding-top: 2rem;
+}
+.social-media-links a{
+    color: var(--darkblue);
+    font-weight: 500 !important;
+    text-shadow: 0px 0px 2px 5px black !important;
+}
+.social-media-icons i{
+    padding: .4rem;
+    color: var(--darkblue);
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    /* color: var(--primary); */
+}
+.newsletter{
+    padding: 1rem 0;
+}
+.newsletter input{
+    padding:.5rem 1rem ;
+    /* border-radius: 30px; */
+}
+.newsletter button{
+    background: var(--darkblue);
+    padding: .6rem 1rem;
+    color: white;
+    border-radius: .3rem;
+}
+/* ---------------------------------FOOTER ENDS---------------------------------------- */

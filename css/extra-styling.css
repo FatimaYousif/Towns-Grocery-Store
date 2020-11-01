@@ -1,0 +1,32 @@
+.overlay{
+    /* background-color: teal; */
+    /* width: 0; */
+    position: relative;
+    overflow: hidden;
+}
+.overlay button {
+    background: none;
+    border: none;
+}
+.jwellery .card button i{
+    background: teal;
+    padding: 10px;
+    border-radius: 50%;
+    align-items: center;
+}
+.jwellery .card img{
+    width: 150px;
+    height: 190px;
+}
+ .jwellery .card {
+     width: 100px !important;
+     margin: 20px;
+     box-shadow: 3px 5px 10px rgb(131, 130, 130);
+ }
+ .product-bottom i{
+     color: goldenrod;
+ }
+ .p-container{
+    display: flex;
+    flex-wrap: wrap;
+ }

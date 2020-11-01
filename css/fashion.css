@@ -1,0 +1,31 @@
+  #electronics, #accessories{
+  }
+  
+  .card{
+    position: relative;
+    margin: 2rem 0;
+    box-shadow: 0 2px 3px 2px rgba(231, 225, 225, 0.5);
+  
+  }
+
+  .card img{
+    width: 100%;
+    height:100%;
+    
+  }
+  .card-img-overlay .card-title {
+    color:white;
+    font-size: 4rem;
+    width: 100%;
+    cursor: pointer;
+    background: linear-gradient(rgba(17, 117, 117,.5),rgba(17, 117, 117,.3));
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    }
+ #electronics .card{
+  height: 400px;
+ }
+  

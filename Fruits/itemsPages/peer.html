@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pear</title>
+    <script
+      src="https://kit.fontawesome.com/76318d9c37.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card {
+        margin-top: 7%;
+        height: 75vh;
+      }
+      .card-img {
+        height: 70vh;
+        margin-top: 3%;
+      }
+      .stars {
+        display: flex;
+        margin-left: -40px;
+      }
+      .stars li {
+        list-style: none;
+      }
+      .priceAndItems {
+        display: flex;
+        justify-content: space-between;
+      }
+      .priceSize {
+        font-size: large;
+        font-weight: 700;
+        margin-bottom: -1px;
+      }
+      .stars .fas {
+        color: yellow;
+      }
+    </style>
+      <script src="../../script/script.js" defer></script>
+      <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid">
+        
+    <div class="row top-bar">
+      <div class="col-lg-6 col-md-8 col-12 logo " id="logo-part">
+        <a class="navbar-brand" href="#"><img src="images/lg.png" alt=""></a>
+        <div class="tagline">
+          <p>Your Neighbor's Grocery Store!</p>
+        </div>
+        <!-- <form>
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </form> -->
+      </div>
+      <div class="col-lg-6 col-md-4 col-12 cart">
+        <div><i class="fas fa-shopping-cart"></i><span>CART</span></div>
+        <div><i class="fas fa-heart"></i><span>Favourites</span> </div>
+        <div> <i class="fas fa-user" onclick="window.location.replace('../../index.html')"></i><span>Log out</span> </div>
+      
+        <!-- <div id="menu-icon"><i class="fas fa-bars" onclick="openMenu()"></i></div> -->
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- --------------------------------NAVBAR STARTS----------------------------------- -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Food
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="vegetables/vegetables.html">Vegetables</a>
+            <a class="dropdown-item" href="Fruits/fruits.html">Fruits</a>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Fashion
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="gents.html">Gents Corner</a>
+            <a class="dropdown-item" href="ladies.html">Ladies Corner</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Electronics
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="homeGadgets/homeGadgets.html">Home Gadgets</a>
+            <a class="dropdown-item" href="Smartgadgets/smartGadgets.html">Smart Gadgets</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Accessories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="jewellery.html">Jwellery</a>
+            <a class="dropdown-item" href="handbags.html">Handbags</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <i class="fas fa-search"></i>
+      </form>
+    </div>
+  </nav>
+  
+  </header>
+    <div class="container">
+      <div class="card mb-3" style="max-width: 800">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../images/4.jpg" class="card-img" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">
+                Pear
+              </h5>
+              <p class="card-text">
+                Pears are a popular fruit that can be dried, cooked, or eaten fresh. People use pears in salads, desserts, and jams. They also drink pear juice. Pears are a good source of potassium and fiber.
+
+                Pears grow in mild regions throughout the world. China, Italy, and the United States are the countries that grow the most pears. Among U.S. states, Washington, Oregon, and California usually grow the largest amount of pears.
+              </p>
+              <div class="priceAndItems">
+                <div class="priceAndIcons">
+                  <p class="card-text priceSize">Price 120$</p>
+                  <ul class="stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star-half-alt"></i></li>
+                  </ul>
+                </div>
+                <div class="cartAndHeart">
+                  <button type="button" class="btn btn-info">
+                    Add to Cart<i class="fas fa-cart-plus"></i>
+                  </button>
+                  <button type="button" class="btn btn-light">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="about-us">
+            <h3>About Town's Grocery</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ipsa adipisci, deleniti neque saepe beatae
+              veniam dolore accusamus aspernatur qui!</p>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="social-media-links">
+            <h3>Quick Links</h3>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cosmetics</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Electronics</a></li>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 mx-auto">
+          <div class="social-media-icons">
+            <h3>Connect</h3>
+            <span><i class="fab fa-facebook-square"></i></span>
+            <span><i class="fab fa-instagram-square"></i></span>
+            <span><i class="fab fa-linkedin"></i></span>
+            <span><i class="fab fa-whatsapp-square"></i></span>
+
+          </div>
+          <div class="newsletter">
+            <h4>Newsletter</h4>
+            <input type="email" placeholder="Email"> <button type="submit">Send</button>
+          </div>
+        </div>
+        <p class="mx-auto">Copyrights &copy 2020 reserved to Team Kalam, Tech Karo</p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
