@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,100;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/* body{
+    overflow-x: hidden;
+} */
+/* ---------------------Variables for color palete---------------------- */
+:root{
+    --primary: #024150;
+    --secondary: #0DB39E;
+    /* --secondary: #3eb9a9; */
+    --aqua: #16DB93;
+    --darkblue:#54478C;
+    --saphireblue:#2C699A;
+    --lightgreen:#83E377;
+    --inchworm:#B9E769;
+    --corn:#EFEA5A;
+    --maize:#F1C453;
+    --sandybrown:#F29E4C;
+}
+
+/* -----------------Utility Styles--------------------------------------- */
+button, input{
+    outline: none;
+    border: none;
+}
+i{
+    cursor: pointer;
+}
+
+.vegetables .card{
+    padding: 0 !important;
+    margin: 0 !important;
+    /* background: green; */
+}
+.vegetables img{
+    width: 100%;
+    height: 310px;
+}
+.vegetables p{
+    padding: 0 !important;
+    margin: 0 !important;
+
+}
+.vegetables .sub-heading h1{
+    position: relative;
+    display: inline;
+}
+/* .vegetables .sub-heading h1::before{
+    content: 'Tomatoes & Onions';
+    color: var(--sandybrown);
+    position: absolute;
+    width: 100%;
+     top: 0; 
+    left: 0; 
+    border-right: .1rem solid var(--primary);
+    height: 100%;
+    animation: slide 3s linear infinite alternate;
+    -webkit-animation: slide 3s linear infinite ;
+    overflow: hidden;
+}
+@keyframes slide{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }} */
+.addCart{
+    display: block !important;
+    font-size: 1.2rem;
+    /* background: yellow; */
+    width: 100%;
+}
+.addCart button{
+    padding: 5px 12px;
+}
+.addCart #addToCart-btn{
+    background: var(--secondary);
+    outline: none !important;
+    border: none;
+}
