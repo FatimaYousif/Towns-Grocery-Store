@@ -1,5 +1,5 @@
 ## ABOUT
-This is my first time buiding a full website for the 
+This is our first time buiding a full website for the 
 
 ### Technologies used:
 1. HTML
